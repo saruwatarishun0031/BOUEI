@@ -43,7 +43,8 @@ public class pleary1 : MonoBehaviour
         // 上下のキーの入力を取得
         float z = Input.GetAxis("Vertical") * speed;
         _rb.AddForce(x, 0, z);
-        
+        transform.RotateAround(transform.position, transform.up, mousex);
+
     }
 
     private IEnumerator Jpl()
