@@ -1462,7 +1462,7 @@ MonoBehaviour:
   maxjp: 100
   Currentjp: 0
   timeOut: 0.4
-  Y: 250
+  Y: 5
 --- !u!23 &1923780013
 MeshRenderer:
   m_ObjectHideFlags: 0

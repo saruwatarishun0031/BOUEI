@@ -12,6 +12,7 @@ public class pleary1 : MonoBehaviour
     [SerializeField] private float Currentjp;
     [SerializeField] float timeOut;
     [SerializeField] float Y;
+    bool flying;
 
     // Start is called before the first frame update
     void Start()
@@ -58,7 +59,7 @@ public class pleary1 : MonoBehaviour
         }
 
     }
-
+    
     void Jp()
     {
         if (Input.GetKey(KeyCode.Space) && Currentjp >= 1)
@@ -66,7 +67,18 @@ public class pleary1 : MonoBehaviour
             Debug.Log("jp");
             Currentjp = Currentjp - 1;
             _jpSlider.value = (float)Currentjp / (float)maxjp;
-            _rb.AddForce(0, Y, 0 );
+            _rb.velocity = new Vector3(_rb.velocity.x, Y, _rb.velocity.z);
+            flying = true;
         }
+        else if(flying)
+        {
+            flying = false;
+            _rb.velocity = new Vector3(_rb.velocity.x, 0, _rb.velocity.z);
+        }
+    }
+
+    void Flying()
+    {
+
     }
 }
