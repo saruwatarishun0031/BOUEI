@@ -77,8 +77,8 @@ public class pleary1 : MonoBehaviour
         }
     }
 
-    void Flying()
-    {
+    //void Flying()
+    //{
 
-    }
+    //}
 }
